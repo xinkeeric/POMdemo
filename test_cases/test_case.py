@@ -36,6 +36,9 @@ class Cass(unittest.TestCase):
     #     pp.add_cart()
     #     cp.cart_info()
     #     sleep(5)
+    @classmethod
+    def tearDownClass(cls) -> None:
+        cls.driver.quit()
 
     # 登录
     @file_data('../data/user.yaml')
